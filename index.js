@@ -80,10 +80,7 @@ mongoose
   .then(() => {
     // Wait for MongoDB connection first, and then build the server
     app.listen(3000, () => {
-      const address = server.address();
-      console.log(`Server listening on${address.address} : ${address.port}`);
-
-      //   console.log(`Server is listening on port 3000`);
+      console.log(`Server is listening on port 3000`);
     });
   })
   .catch((err) => {
