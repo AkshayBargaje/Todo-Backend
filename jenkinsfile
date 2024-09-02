@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('QA') {
+            steps {
+                echo 'QA'
+                bat 'git clone https://github.com/AkshayBargaje/Todo-Backend.git'
+            }
+        }
+        stage('UAT') {
+            steps {
+                echo 'UAT'
+            }
+        }
+        stage('Pre Prod') {
+            steps {
+                echo 'Pre Prod'
+            }
+        }
+        stage('Prod') {
+            steps {
+                echo 'Prod'
+            }
+        }
+    }
+}
